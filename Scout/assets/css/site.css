@@ -1,0 +1,89 @@
+/* Penyesuaian warna & komponen tambahan Sambal Colek (dimuat setelah main.css) */
+:root {
+  --accent-color: #c8321f;
+  --heading-color: #1b1410;
+  --nav-color: #1b1410;
+  --nav-hover-color: #c8321f;
+  --nav-dropdown-hover-color: #c8321f;
+  --btn-color: #1f5b2a;
+  --btn-hover-color: #174420;
+}
+
+/* Carousel menu */
+.menu-carousel-wrapper { position: relative; display: flex; align-items: center; }
+.menu-track { display: flex; gap: 16px; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; padding: 10px 4px; width: 100%; }
+.menu-track::-webkit-scrollbar { display: none; }
+.menu-item-card { flex: 0 0 calc(25% - 12px); min-width: 240px; height: 420px; border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12); display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; color: #777; font-size: 14px; }
+.menu-item-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+.menu-item-card:hover img { transform: scale(1.04); }
+.menu-nav-btn { position: absolute; top: 50%; transform: translateY(-50%); z-index: 10; width: 42px; height: 42px; border-radius: 50%; border: none; background: #fff; color: #1b1410; box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25); display: flex; align-items: center; justify-content: center; font-size: 20px; }
+.menu-nav-btn.prev { left: -12px; }
+.menu-nav-btn.next { right: -12px; }
+@media (max-width: 991px) { .menu-item-card { flex: 0 0 calc(50% - 8px); } }
+@media (max-width: 576px) { .menu-item-card { flex: 0 0 85%; } }
+
+/* Header halaman dalam */
+.page-title { padding: 70px 0 50px; text-align: center; color: #fff; background: linear-gradient(rgba(20, 12, 6, .7), rgba(20, 12, 6, .8)), url(../img/tempat.jpg) center/cover; }
+.page-title h1 { color: #fff; font-size: 40px; font-weight: 700; }
+
+/* Linimasa sejarah */
+.timeline { border-left: 3px solid #e8b04a; margin-left: 10px; padding-left: 28px; }
+.timeline-item { position: relative; margin-bottom: 32px; }
+.timeline-item::before { content: ""; position: absolute; left: -38px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: var(--accent-color); }
+.timeline-item .date { color: var(--accent-color); font-weight: 700; }
+
+/* Bagan struktur */
+.org-chart { text-align: center; }
+.org-chart ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.org-node { display: inline-block; background: #fff; border: 2px solid var(--btn-color); border-radius: 12px; padding: 14px 22px; min-width: 200px; box-shadow: 0 6px 16px rgba(0, 0, 0, .08); }
+.org-node small { display: block; color: var(--accent-color); font-weight: 600; }
+.org-node.top { background: var(--btn-color); color: #fff; }
+.org-node.top small { color: #e8b04a; }
+.org-node.outlet { border-color: var(--accent-color); min-width: 150px; padding: 10px 14px; }
+.org-line { width: 2px; height: 28px; background: var(--btn-color); margin: 0 auto; }
+
+/* ===== Gaya beranda ala Ayom Jogja ===== */
+:root { --gold: #e8b04a; --cream: #fff8ee; --nav-mobile-background-color: #1b1410; --nav-dropdown-background-color: #1b1410; --nav-dropdown-color: #fff; }
+.header { position: fixed !important; top: 0; left: 0; right: 0; background: rgba(27, 20, 16, .92) !important; backdrop-filter: blur(6px); }
+.header .navmenu a, .header .navmenu a:focus { color: #fff; text-transform: uppercase; letter-spacing: .5px; font-size: 14px; }
+.header .navmenu a:hover, .header .navmenu .active { color: var(--gold); }
+.mobile-nav-toggle { color: #fff !important; }
+.page-title { padding-top: 150px; }
+body.index-page { background: var(--cream); }
+
+.hero-sc { min-height: 100vh; display: flex; align-items: center; text-align: center; color: #fff; background: linear-gradient(rgba(20, 12, 6, .55), rgba(20, 12, 6, .7)), url(../img/tempat.jpg) center/cover fixed; }
+.hero-sc h1 { font-family: 'Playfair Display', serif; color: #fff; font-size: clamp(2.4rem, 7vw, 5rem); font-weight: 700; }
+.hero-sc h1 span { color: var(--gold); }
+.hero-sc .open-hours { display: inline-block; margin-top: 34px; padding: 8px 22px; border: 1px solid var(--gold); color: var(--gold); letter-spacing: 2px; font-size: 13px; text-transform: uppercase; }
+.btn-sc { display: inline-block; padding: 12px 30px; border-radius: 30px; background: var(--btn-color); color: #fff; text-decoration: none; font-weight: 600; border: 2px solid var(--btn-color); margin: 6px; transition: .2s; }
+.btn-sc:hover { background: var(--btn-hover-color); border-color: var(--btn-hover-color); color: #fff; }
+.btn-sc.line { background: transparent; border-color: #fff; }
+.sec { padding: 90px 0; }
+.sec.dark { background: #1b1410; color: #fff; }
+.ttl { text-align: center; margin-bottom: 46px; }
+.ttl small { color: var(--accent-color); letter-spacing: 3px; text-transform: uppercase; font-weight: 600; }
+.ttl h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 6px 0; }
+.dark .ttl h2 { color: #fff; }
+.ttl::after { content: ""; display: block; width: 70px; height: 3px; background: var(--gold); margin: 14px auto 0; }
+.photo { width: 100%; border-radius: 14px; box-shadow: 0 14px 36px rgba(0, 0, 0, .25); }
+.chips span { display: inline-block; margin: 4px; padding: 6px 16px; border-radius: 20px; background: var(--btn-color); color: #fff; font-size: 14px; }
+.info { display: flex; gap: 14px; margin-bottom: 18px; }
+.info i { font-size: 24px; color: var(--accent-color); }
+.info h4 { font-size: 1.05rem; margin: 0; }
+.info p { margin: 0; font-size: 14px; }
+.res { background: #fff; border-radius: 16px; padding: 30px; box-shadow: 0 14px 40px rgba(0, 0, 0, .12); }
+.res .form-control { padding: 11px 14px; }
+.map-embed { border: 0; width: 100%; height: 280px; border-radius: 12px; }
+.scroll-top { background-color: var(--btn-color); }
+.scroll-top:hover { background-color: var(--btn-hover-color); }
+
+/* Visi & Misi */
+.vm-sub { max-width: 760px; text-align: center; margin: -20px auto 46px; color: #6b6259; font-size: 1.05rem; }
+.vm-card { height: 100%; background: #fff; border-radius: 14px; padding: 40px 28px 34px; text-align: center; box-shadow: 0 6px 20px rgba(0, 0, 0, .08); transition: .25s; }
+.vm-card:hover { transform: translateY(-6px); box-shadow: 0 14px 32px rgba(0, 0, 0, .14); }
+.vm-icon { width: 88px; height: 88px; margin: 0 auto 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: color-mix(in srgb, var(--btn-color), transparent 88%); box-shadow: 0 6px 16px rgba(0, 0, 0, .08); }
+.vm-icon i { font-size: 34px; color: var(--btn-color); }
+.vm-card h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: 12px; }
+.vm-card p { font-size: 15px; line-height: 1.7; margin: 0; color: #5a5148; }
+#visi-misi { padding-bottom: 30px; }
+#about { padding-top: 50px; }
